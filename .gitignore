@@ -1,2 +1,11 @@
 # local
-/extra/*
+/extra/
+/lib/epkgs/
+
+# cache
+*.elc
+*-autoloads.el
+*.info
+flycheck_*.el
+*-pkg.el
+# dir

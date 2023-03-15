@@ -3,14 +3,14 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-(defvar user/extra-dir (expand-file-name "extra" doom-user-dir)
+(defvar custom/extra-dir (expand-file-name "extra" doom-user-dir)
   "本地不同步配置所在文件夹")
 
 ;; 加载 `private` 文件夹下指定的本地不同步的配置文件
 (dolist (file-name
          '("local.el" ; 本地一般配置
            ))
-  (let ((file-path (file-name-concat user/extra-dir file-name )))
+  (let ((file-path (file-name-concat custom/extra-dir file-name )))
     (and (file-exists-p file-path)
       (load! file-path))))
 
@@ -85,6 +85,3 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
-;; borg - secondary package manager
-(load! "lisp/init-borg")

@@ -35,3 +35,5 @@
 [submodule "yasnippet"]
 	path = lib/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git
+[submodule "acm"]
+	path = lib/acm

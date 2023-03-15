@@ -1,3 +1,6 @@
+[submodule "acm-terminal"]
+	path = lib/acm-terminal
+	url = git@github.com:twlz0ne/acm-terminal.git
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
@@ -17,3 +20,18 @@
 [submodule "llama"]
 	path = lib/llama
 	url = https://git.sr.ht/~tarsius/llama
+[submodule "lsp-bridge"]
+	path = lib/lsp-bridge
+	url = git@github.com:manateelazycat/lsp-bridge.git
+[submodule "markdown-mode"]
+	path = lib/markdown-mode
+	url = git@github.com:jrblevin/markdown-mode.git
+[submodule "popon"]
+	path = lib/popon
+	url = git@codeberg.org:akib/emacs-popon.git
+[submodule "posframe"]
+	path = lib/posframe
+	url = git@github.com:tumashu/posframe.git
+[submodule "yasnippet"]
+	path = lib/yasnippet
+	url = git@github.com:joaotavora/yasnippet.git

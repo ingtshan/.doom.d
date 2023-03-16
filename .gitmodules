@@ -1,3 +1,5 @@
+[submodule "acm"]
+	path = lib/acm
 [submodule "acm-terminal"]
 	path = lib/acm-terminal
 	url = git@github.com:twlz0ne/acm-terminal.git
@@ -26,6 +28,9 @@
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
+[submodule "misc"]
+	path = lib/misc
+	url = git@github.com:ingtshan/.misc.d.git
 [submodule "popon"]
 	path = lib/popon
 	url = git@codeberg.org:akib/emacs-popon.git
@@ -35,5 +40,3 @@
 [submodule "yasnippet"]
 	path = lib/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git
-[submodule "acm"]
-	path = lib/acm

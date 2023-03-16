@@ -1,8 +1,7 @@
 # 文档
 
 ## borg(with epkg) install pacakges to `doom/lib`
-安装过程 (如果需要重装)
-
+### 安装过程 (如果需要重装)
 ``` shell
 git submodule add --name borg git@github.com:emacscollective/borg.git lib/borg
 git submodule add --name closql git@github.com:emacscollective/closql.git lib/closql
@@ -19,9 +18,14 @@ git commit -m "Assimilate epkg and dependencies"
 
 1. 搜索
 
-## lsp-bridge
+## .misc.d
+### 安装过程 (如果需要重装)
+``` emacs-lisp
+(borg-assimilate "misc" "git@github.com:ingtshan/.misc.d.git")
+```
 
-安装过程 (如果需要重装)
+## lsp-bridge
+### 安装过程 (如果需要重装)
 ``` emacs-lisp
 ;;依赖
 (custom/borg-assimilate "github" "tumashu/posframe")

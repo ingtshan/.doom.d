@@ -5,14 +5,12 @@
 ;;;---------------------------------------------------;;;
 (setq epkg-repository (expand-file-name "lib/epkgs" doom-user-dir))
 
-(defun custom/borg-initialize ()
-  "初始化 borg-initialize"
-  (add-to-list 'load-path (expand-file-name "lib/borg" doom-user-dir))
-  (require 'borg)
-  (borg-initialize))
-
 ;;用 borg 做第二个包管理
-(custom/borg-initialize) ; 初始化
+(add-to-list 'load-path (expand-file-name "lib/borg" doom-user-dir))
+(require 'borg)
+;;(package-initialize)
+(borg-initialize)
+
 ;;;---------------------------------------------------;;;
 ;;;       tool functions                              ;;;
 ;;;---------------------------------------------------;;;

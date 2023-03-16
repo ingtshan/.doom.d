@@ -33,6 +33,7 @@
 	url = git@github.com:ingtshan/.misc.d.git
 [submodule "misc-doom"]
 	path = lib/misc-doom
+	no-byte-compile = init-lsp-bridge.el
 [submodule "popon"]
 	path = lib/popon
 	url = git@codeberg.org:akib/emacs-popon.git

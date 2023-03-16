@@ -23,6 +23,16 @@ git commit -m "Assimilate epkg and dependencies"
 ``` emacs-lisp
 (borg-assimilate "misc" "git@github.com:ingtshan/.misc.d.git")
 ```
+### ln -s from misc
+example
+``` shell
+## add to .gitmodules
+[submodule "misc-doom"]
+	path = lib/misc-doom
+
+## cd $dir/lib
+ln -s lib/misc/lisp/doom misc-doom
+```
 
 ## lsp-bridge
 ### 安装过程 (如果需要重装)

@@ -3,6 +3,12 @@
 [submodule "acm-terminal"]
 	path = lib/acm-terminal
 	url = git@github.com:twlz0ne/acm-terminal.git
+[submodule "async"]
+	path = lib/async
+	url = https://github.com/jwiegley/emacs-async
+[submodule "async-await"]
+	path = lib/async-await
+	url = https://github.com/chuntaro/emacs-async-await
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
@@ -12,6 +18,15 @@
 [submodule "compat"]
 	path = lib/compat
 	url = https://git.sr.ht/~pkal/compat
+[submodule "deferred"]
+	path = lib/deferred
+	url = https://github.com/kiwanami/emacs-deferred
+[submodule "emacs-aichat"]
+	path = lib/emacs-aichat
+	url = git@github.com:xhcoding/emacs-aichat.git
+[submodule "emacs-websocket"]
+	path = lib/emacs-websocket
+	url = git@github.com:ahyatt/emacs-websocket.git
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
@@ -19,6 +34,9 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
+[submodule "iter2"]
+	path = lib/iter2
+	url = https://github.com/doublep/iter2
 [submodule "llama"]
 	path = lib/llama
 	url = https://git.sr.ht/~tarsius/llama
@@ -28,6 +46,9 @@
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
+[submodule "mind-wave"]
+	path = lib/mind-wave
+	url = git@github.com:manateelazycat/mind-wave.git
 [submodule "misc"]
 	path = lib/misc
 	url = git@github.com:ingtshan/.misc.d.git
@@ -40,6 +61,12 @@
 [submodule "posframe"]
 	path = lib/posframe
 	url = git@github.com:tumashu/posframe.git
+[submodule "promise"]
+	path = lib/promise
+	url = https://github.com/chuntaro/emacs-promise
+[submodule "request"]
+	path = lib/request
+	url = https://github.com/tkf/emacs-request
 [submodule "yasnippet"]
 	path = lib/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git

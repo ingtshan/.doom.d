@@ -1,5 +1,3 @@
-[submodule "acm"]
-	path = lib/acm
 [submodule "acm-terminal"]
 	path = lib/acm-terminal
 	url = git@github.com:twlz0ne/acm-terminal.git
@@ -43,6 +41,7 @@
 [submodule "lsp-bridge"]
 	path = lib/lsp-bridge
 	url = git@github.com:manateelazycat/lsp-bridge.git
+	recursive-byte-compile = true
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
@@ -52,9 +51,8 @@
 [submodule "misc"]
 	path = lib/misc
 	url = git@github.com:ingtshan/.misc.d.git
-[submodule "misc-doom"]
-	path = lib/misc-doom
-	no-byte-compile = init-lsp-bridge.el
+	recursive-byte-compile = true
+	no-byte-compile = lisp/doom
 [submodule "popon"]
 	path = lib/popon
 	url = git@codeberg.org:akib/emacs-popon.git

@@ -1,5 +1,6 @@
 # local
-/extra/
+/extra
+/extra/*
 /lib/epkgs/
 
 # cache

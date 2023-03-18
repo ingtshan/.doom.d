@@ -7,6 +7,10 @@
 [submodule "async-await"]
 	path = lib/async-await
 	url = https://github.com/chuntaro/emacs-async-await
+[submodule "blink-search"]
+	path = lib/blink-search
+	url = git@github.com:manateelazycat/blink-search.git
+    no-byte-compile = blink-search.el
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
@@ -65,6 +69,9 @@
 [submodule "request"]
 	path = lib/request
 	url = https://github.com/tkf/emacs-request
+[submodule "sort-tab"]
+	path = lib/sort-tab
+	url = git@github.com:manateelazycat/sort-tab.git
 [submodule "yasnippet"]
 	path = lib/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git

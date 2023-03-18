@@ -108,6 +108,13 @@
   (setq aw-scope 'global
         aw-background t))
 
+;; helper
+(map! :leader :desc "vertico-posframe-cleanup" :n "h 0"
+      #'(lambda () (interactive) (message "do vertico-posframe-cleanup")
+          (vertico-posframe-cleanup)))
+(map! :leader :desc "projectile-invalidate-cache" :n "h 9"
+      #'projectile-invalidate-cache)
+
 ;; (require 'web-mode)
 ;; ;; Define vue-mode as kind of web-mode
 ;; (define-derived-mode vue-mode web-mode "Vue")
@@ -118,28 +125,41 @@
 ;;;inital misc
 (let ((default-directory (expand-file-name "lisp" (borg-worktree "misc"))))
   (normal-top-level-add-subdirs-to-load-path))
+(require 'custom-functions)
 (require 'init-aichat) ; M-x aichat
+(require 'init-blink-search)
+(require 'init-sort-tab)
 
 ;; programming
 (require 'init-lsp-bridge)
 (require 'init-ruby-on-rails)
 
 ;;; 一般编辑
-;;
+;; tab 切换 tabify, untabify
 ;;; 文本跳转
 ;; 切换 window: next: C-x o select: M-o
 ;; 搜索 buffer: C-s
-;;
+;; 搜索 buffer SPC s (a: blink-search, s(b): buffer, B: all buffer, S: search with point)
+;; 搜索 file   SPC s (d: current-dir, D: other-dir)
 ;;; 编程编辑
 ;; 注释       : C-'
 ;;
 ;;; key bindings
+(map! :leader :desc "blink search all" :n "sa" #'blink-search)
 ;; remapping
 (global-set-key [remap isearch-forward] #'consult-line) ; C-s
 (global-set-key (kbd "C-'") #'comment-line)
 (global-set-key (kbd "M-o") 'ace-window) ; installed by doom
 ;; memo
 ;; embark-act C-;
+
+(add-hook 'doom-first-buffer-hook
+          (lambda ()
+            ;; sort tab on
+            (sort-tab-turn-on)
+            ;; vimish fold mode
+            (vimish-fold-global-mode 1)
+            (global-company-mode -1)))
 
 ;;; last load
 (custom/doom-load-extra-file "doom-after-init.el")

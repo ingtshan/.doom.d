@@ -13,6 +13,12 @@
 ;; 加载 `extra` 文件夹下指定的本地不同步的配置文件
 (custom/doom-load-extra-file "local.el") ; 本地一般配置
 
+;; proxy
+;; (setq url-proxy-services
+;;    '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
+;;      ("http" . "127.0.0.1:1087")
+;;      ("https" . "127.0.0.1:1087")))
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 ;; (setq user-full-name "ingtshan"

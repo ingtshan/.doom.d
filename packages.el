@@ -52,3 +52,5 @@
 ;; (package! tree-sitter-langs
 ;;   :recipe (:host github
 ;;            :repo "ingtshan/tree-sitter-langs"))
+
+(package! leetcode)

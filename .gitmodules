@@ -72,6 +72,12 @@
 [submodule "sort-tab"]
 	path = lib/sort-tab
 	url = git@github.com:manateelazycat/sort-tab.git
+[submodule "translate-shell"]
+	path = lib/translate-shell
+	url = git@github.com:xuchunyang/translate-shell.el.git
+[submodule "wakatime-mode"]
+	path = lib/wakatime-mode
+	url = https://github.com/wakatime/wakatime-mode
 [submodule "yasnippet"]
 	path = lib/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git

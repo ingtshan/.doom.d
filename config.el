@@ -3,6 +3,25 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
+;;; mac basic keybinding
+(map!
+ ;; "s-a" #'mark-whole-buffer
+ ;; "s-v" #'yank
+ ;; "s-c" #'kill-ring-save
+ ;; "s-s" #'save-buffer
+ ;; "s-l" #'goto-line
+ "s-w" #'delete-frame
+ "s-h" #'iconify-frame
+ "s-z" #'undo
+ "s-k" #'kill-this-buffer
+ "s-n" #'make-second-screen-frame
+ "s-q" #'save-buffers-kill-emacs
+ ;; "s-;" #'vterm-pop-posframe-toggle
+ "s-[" #'toggle-frame-maximized-or-fullframe
+ "C-x w" #'winner-undo
+ )
+
+
 (defvar custom/extra-dir (expand-file-name "extra" doom-user-dir)
   "本地不同步配置所在文件夹")
 
@@ -108,12 +127,15 @@
   (setq aw-scope 'global
         aw-background t))
 
-;; helper
-(map! :leader :desc "vertico-posframe-cleanup" :n "h 0"
-      #'(lambda () (interactive) (message "do vertico-posframe-cleanup")
-          (vertico-posframe-cleanup)))
-(map! :leader :desc "projectile-invalidate-cache" :n "h 9"
-      #'projectile-invalidate-cache)
+(use-package translate-shell
+  :config
+  ;; <https://translate.google.com> is blocked in China for no apparent
+  ;; reason. No one ever asked my option.
+  ;; for mac you need proxychains-ng installed
+  ;; (setq translate-shell-command "proxychains4 -q trans -t en %s"
+  ;;       translate-shell-brief-command "proxychains4 -q trans -brief -t zh %s")
+  (setq translate-shell-command "proxychains4 -q trans -t en+zh %s"
+        translate-shell-brief-command "proxychains4 -q trans -brief -t zh+en %s"))
 
 ;; (require 'web-mode)
 ;; ;; Define vue-mode as kind of web-mode
@@ -129,37 +151,27 @@
 (require 'init-aichat) ; M-x aichat
 (require 'init-blink-search)
 (require 'init-sort-tab)
+;; (require 'wakatime-mode)
 
 ;; programming
 (require 'init-lsp-bridge)
 (require 'init-ruby-on-rails)
 
-;;; 一般编辑
-;; tab 切换 tabify, untabify
-;;; 文本跳转
-;; 切换 window: next: C-x o select: M-o
-;; 搜索 buffer: C-s
-;; 搜索 buffer SPC s (a: blink-search, s(b): buffer, B: all buffer, S: search with point)
-;; 搜索 file   SPC s (d: current-dir, D: other-dir)
-;;; 编程编辑
-;; 注释       : C-'
-;;
-;;; key bindings
-(map! :leader :desc "blink search all" :n "sa" #'blink-search)
-;; remapping
-(global-set-key [remap isearch-forward] #'consult-line) ; C-s
-(global-set-key (kbd "C-'") #'comment-line)
-(global-set-key (kbd "M-o") 'ace-window) ; installed by doom
-;; memo
-;; embark-act C-;
-
 (add-hook 'doom-first-buffer-hook
           (lambda ()
             ;; sort tab on
             (sort-tab-turn-on)
+            ;; enable mode here
+            (+global-word-wrap-mode)
+            ;; show 80 charater boundary
+            (set-face-foreground 'fill-column-indicator "gray40")
+            (global-display-fill-column-indicator-mode)
+            ;; tracking
+            (global-wakatime-mode)
             ;; vimish fold mode
             (vimish-fold-global-mode 1)
             (global-company-mode -1)))
 
 ;;; last load
+(load! "bindings")
 (custom/doom-load-extra-file "doom-after-init.el")

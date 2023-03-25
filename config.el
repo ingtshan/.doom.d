@@ -137,6 +137,15 @@
   (setq translate-shell-command "proxychains4 -q trans -t en+zh %s"
         translate-shell-brief-command "proxychains4 -q trans -brief -t zh+en %s"))
 
+;; vue-mode
+;; (lsp-install-server) vls for vue 2
+(use-package! web-mode
+  :config
+  ;; Define vue-mode as kind of web-mode
+  (define-derived-mode vue-mode web-mode "Vue")
+  ;; (setq auto-mode-alist (delete '("\\.vue\\'" . web-mode) auto-mode-alist))
+  (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode) 'append))
+
 ;; (require 'web-mode)
 ;; ;; Define vue-mode as kind of web-mode
 ;; (define-derived-mode vue-mode web-mode "Vue")
@@ -145,8 +154,11 @@
 ;; (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode) 'append)
 
 ;;;inital misc
-(let ((default-directory (expand-file-name "lisp" (borg-worktree "misc"))))
-  (normal-top-level-add-subdirs-to-load-path))
+;; (let ((default-directory (expand-file-name "lisp" (borg-worktree "misc"))))
+;;   (normal-top-level-add-subdirs-to-load-path))
+(add-to-list 'load-path (expand-file-name "lisp" (borg-worktree "misc")))
+(add-to-list 'load-path (expand-file-name "doom" (borg-worktree "misc")))
+
 (require 'custom-functions)
 (require 'init-aichat) ; M-x aichat
 (require 'init-blink-search)
@@ -174,4 +186,4 @@
 
 ;;; last load
 (load! "bindings")
-(custom/doom-load-extra-file "doom-after-init.el")
+(custom/doom-load-extra-file "doom-last-config.el")

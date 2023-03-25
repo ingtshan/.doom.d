@@ -57,3 +57,13 @@
 ;; (package! netease-cloud-music :recipe
 ;;   (:host github :repo "SpringHan/netease-cloud-music.el" :files ("*.el")))
 (package! consult-notes)
+
+;; for lsp-bridge
+(package! posframe)
+(package! markdown-mode)
+(package! yasnippet)
+
+;; for aichat
+(package! async-await)
+(package! websocket
+  :recipe (:host github :repo "ahyatt/emacs-websocket"))

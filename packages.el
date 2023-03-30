@@ -40,7 +40,6 @@
 ;; Use `:pin' to specify a particular commit to install.
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
-
 ;; Doom's packages are pinned to a specific commit and updated from release to
 ;; release. The `unpin!' macro allows you to unpin single packages...
 ;(unpin! pinned-package)
@@ -49,6 +48,8 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+;; for more recipe format check https://github.com/radian-software/straight.el#the-recipe-format
+;;
 ;; (package! tree-sitter-langs
 ;;   :recipe (:host github
 ;;            :repo "ingtshan/tree-sitter-langs"))
@@ -62,6 +63,12 @@
 (package! posframe)
 (package! markdown-mode)
 (package! yasnippet)
+;; cannot install by straight
+;; (package! popo) ;; eamcsmirror
+;; (package! popo
+;;   :recipe (:repo "https://codeberg.org/akib/emacs-popon.git"))
+;; (package! popo
+;;   :recipe (:host codeberg :repo "akib/emacs-popon"))
 
 ;; for aichat
 (package! async-await)

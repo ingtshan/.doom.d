@@ -21,9 +21,15 @@
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
 	no-byte-compile = emacsql-pg.el
+[submodule "emojify"]
+	path = lib/emojify
+	url = https://github.com/iqbalansari/emacs-emojify
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
+[submodule "insert-gitmoji"]
+	path = lib/insert-gitmoji
+	url = git@github.com:ingtshan/insert-gitmoji.el.git
 [submodule "llama"]
 	path = lib/llama
 	url = https://git.sr.ht/~tarsius/llama
@@ -38,7 +44,9 @@
 	path = lib/misc
 	url = git@github.com:ingtshan/.misc.d.git
 	recursive-byte-compile = true
-	no-byte-compile = lisp/doom
+[submodule "popon"]
+	path = lib/popon
+	url = git@codeberg.org:akib/emacs-popon.git
 [submodule "sort-tab"]
 	path = lib/sort-tab
 	url = git@github.com:manateelazycat/sort-tab.git

@@ -156,16 +156,15 @@
 ;;;inital misc
 ;; (let ((default-directory (expand-file-name "lisp" (borg-worktree "misc"))))
 ;;   (normal-top-level-add-subdirs-to-load-path))
-(add-to-list 'load-path (expand-file-name "lisp" (borg-worktree "misc")))
 (add-to-list 'load-path (expand-file-name "doom" (borg-worktree "misc")))
 
 (require 'custom-functions)
-(require 'init-aichat) ; M-x aichat
+(require 'init-aichat)        ; M-x aichat
 (require 'init-blink-search)
 (require 'init-sort-tab)
-;; (require 'wakatime-mode)
 
 ;; programming
+(require 'wakatime-mode)
 (require 'init-lsp-bridge)
 (require 'init-ruby-on-rails)
 
@@ -185,5 +184,5 @@
             (global-company-mode -1)))
 
 ;;; last load
-(load! "bindings")
+(load! "keybindings")
 (custom/doom-load-extra-file "doom-last-config.el")

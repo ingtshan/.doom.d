@@ -1,6 +1,6 @@
 ;;; init.el -*- lexical-binding: t; -*-
 
-(unless (fboundp 'doom!)
+(when (or (boundp 'custom/borg-actived) (not (fboundp 'doom!)))
   (defmacro doom! (&rest modules) "Skip by borg compile init.el" (or t modules))
   (message "hello borg"))
 
@@ -142,8 +142,7 @@
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
-       go
-       ;;(go +lsp)         ; the hipster dialect
+       (go +tree-sitter)   ; the hipster dialect
        ;;(graphql +lsp)    ; Give queries a REST
        ;;(haskell +lsp)    ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python

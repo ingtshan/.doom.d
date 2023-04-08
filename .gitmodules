@@ -44,6 +44,12 @@
 	path = lib/misc
 	url = git@github.com:ingtshan/.misc.d.git
 	recursive-byte-compile = true
+[submodule "mpv"]
+	path = lib/mpv
+	url = https://github.com/kljohann/mpv.el
+[submodule "org-mpvi"]
+	path = lib/org-mpvi
+	url = git@github.com:lorniu/org-mpvi.git
 [submodule "popon"]
 	path = lib/popon
 	url = git@codeberg.org:akib/emacs-popon.git

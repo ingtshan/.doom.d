@@ -1,7 +1,6 @@
 ;;; init/config.el -*- lexical-binding: t; -*-
 
 ;; (setenv "PATH" (concat  "/opt/homebrew/bin/" ":" (getenv "PATH")))
-
 ;;;---------------------------------------------------;;;
 ;;;       +borg - secondary package manager           ;;;
 ;;;---------------------------------------------------;;;

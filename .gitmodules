@@ -27,6 +27,9 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
+[submodule "find-file-in-project"]
+	path = lib/find-file-in-project
+	url = https://github.com/redguardtoo/find-file-in-project
 [submodule "insert-gitmoji"]
 	path = lib/insert-gitmoji
 	url = git@github.com:ingtshan/insert-gitmoji.el.git

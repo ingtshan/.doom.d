@@ -4,22 +4,8 @@
 (defvar custom/extra-dir (expand-file-name "extra" doom-user-dir)
   "本地不同步配置所在文件夹")
 
-;;; mac basic keybinding
-(map!
- ;; "s-a" #'mark-whole-buffer
- ;; "s-v" #'yank
- ;; "s-c" #'kill-ring-save
- ;; "s-s" #'save-buffer
- ;; "s-l" #'goto-line
- "s-w" #'delete-frame
- "s-h" #'iconify-frame
- "s-z" #'undo
- "s-k" #'kill-this-buffer
- "s-n" #'make-second-screen-frame
- "s-q" #'save-buffers-kill-emacs
- ;; "s-;" #'vterm-pop-posframe-toggle
- "s-[" #'toggle-frame-maximized-or-fullframe
- "C-x w" #'winner-undo)
+(add-hook 'emacs-startup-hook (lambda ()
+                                (load! "+keybindings")))
 
 (defun custom/local-require (feature)
   (let* ((file-name (concat (symbol-name feature) ".el"))
@@ -74,6 +60,7 @@
 (require 'init-aichat)        ; M-x aichat
 (require 'init-blink-search)
 (require 'init-sort-tab)
+(require 'init-deadgrep)
 
 ;; programming
 (require 'wakatime-mode)
@@ -82,6 +69,8 @@
 
 (add-hook 'doom-first-buffer-hook
           (lambda ()
+            ;; preload
+            (require 'deadgrep)
             ;; sort tab on
             (sort-tab-turn-on)
             ;; enable mode here
@@ -96,5 +85,4 @@
             (global-company-mode -1)))
 
 ;;; last load
-(load! "+keybindings")
 (custom/local-require 'custom-last)

@@ -2,6 +2,7 @@
 /extra
 /extra/*
 /lib/epkgs/
+.projectile
 
 # cache
 *.elc
@@ -9,4 +10,4 @@
 *.info
 flycheck_*.el
 *-pkg.el
-# dir
+

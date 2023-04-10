@@ -26,3 +26,6 @@
 (package! async-await)
 (package! websocket
   :recipe (:host github :repo "ahyatt/emacs-websocket"))
+
+;; rg file
+(package! deadgrep)

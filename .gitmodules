@@ -14,6 +14,9 @@
 [submodule "compat"]
 	path = lib/compat
 	url = https://git.sr.ht/~pkal/compat
+[submodule "dash-at-point"]
+	path = lib/dash-at-point
+	url = https://github.com/stanaka/dash-at-point
 [submodule "emacs-aichat"]
 	path = lib/emacs-aichat
 	url = git@github.com:xhcoding/emacs-aichat.git
@@ -33,6 +36,9 @@
 [submodule "insert-gitmoji"]
 	path = lib/insert-gitmoji
 	url = git@github.com:ingtshan/insert-gitmoji.el.git
+[submodule "jinx"]
+	path = lib/jinx
+	url = git@github.com:minad/jinx.git
 [submodule "llama"]
 	path = lib/llama
 	url = https://git.sr.ht/~tarsius/llama
@@ -47,12 +53,6 @@
 	path = lib/misc
 	url = git@github.com:ingtshan/.misc.d.git
 	recursive-byte-compile = true
-[submodule "mpv"]
-	path = lib/mpv
-	url = https://github.com/kljohann/mpv.el
-[submodule "org-mpvi"]
-	path = lib/org-mpvi
-	url = git@github.com:lorniu/org-mpvi.git
 [submodule "popon"]
 	path = lib/popon
 	url = git@codeberg.org:akib/emacs-popon.git
